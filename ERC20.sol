@@ -311,7 +311,7 @@ contract ERC20 is Context, IERC20 {
     function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual { }
 }
 
-//The contract below will handle custom token
+//The contract below will handle custom token without a fixed supply
 contract VECKSToken is ERC20 {
     constructor(uint256 initialSupply) public ERC20("EnterTokenNameHere", "ENTERTOKENSYMBOL") {
         _mint(msg.sender, initialSupply);
